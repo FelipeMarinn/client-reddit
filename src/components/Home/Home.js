@@ -5,6 +5,7 @@ import {
   getPostsAsync, 
   selectFilteredPosts,
 } from '../../reducers/postSlice';
+import style from './Home.module.css'
 
 export const Home = () => {
   const dispatch = useDispatch()
