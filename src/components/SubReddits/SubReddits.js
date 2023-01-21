@@ -17,21 +17,31 @@ export const SubReddits = () => {
     dispatch( getPostsAsync(subRedditUrl) )
   }
 
-  console.log(subReddits);
   return (
-    <aside className={style.menu}>
-      {
-        subReddits.map( subReddit => (
-          <div
-            aria-hidden
-            key={ subReddit.id }
-            role='button' 
-            onClick={ () => handleClick(subReddit.url) }
-          >
-            <p>{ subReddit.title }</p>
-          </div>
-        ))
+    <div className={style.container}>
+      <div className={style.titleContainer}> 
+        <h2>SubReddits</h2>
+      </div>
+      <ul>
+        {
+          subReddits.map( subReddit => (
+            <li key={ subReddit.id }>
+              <button 
+                onClick={ () => handleClick(subReddit.url) }
+                type='button'
+              >
+                {
+                  subReddit.icon_img ? <img 
+                  src={subReddit.icon_img} 
+                  alt={ subReddit.display_name }/>
+                  : <div className={style.icon}></div>
+                }
+                { subReddit.display_name }
+              </button>
+            </li>
+          ))
       }
-    </aside>
+      </ul>
+    </div>
   )
 }

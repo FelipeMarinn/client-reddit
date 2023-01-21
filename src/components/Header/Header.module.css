@@ -1,8 +1,9 @@
 .header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 0 var( --spacing-4);
-    box-shadow: var(--box-shadow);
+    padding: var( --spacing-2) var(--spacing-4);
+    /* box-shadow: var(--box-shadow); */
+    border: 1px solid rgba(0, 0, 0, 0.144);
 }
 
 .logo {
@@ -10,9 +11,11 @@
     grid-column: 1 / 2;
     font-size: 18px;
     color: var( --color-text-header);
+    align-items: center;
 }
 
 .logo img {
+    margin: 0;
     margin-right: var( --spacing-0);
     width: 2.2rem;
 }

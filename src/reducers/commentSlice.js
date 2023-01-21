@@ -27,9 +27,7 @@ export const commentSlice = createSlice({
     extraReducers: (builder) => {
         builder
           .addCase(getCommentAsync.fulfilled, (state, action) => {
-            console.log(action.payload);
             const parentId = action.payload[0].parent_id.substring(3)
-            console.log(parentId);
             state.comments = { ...state.comments, [parentId]: action.payload }
           })
     }

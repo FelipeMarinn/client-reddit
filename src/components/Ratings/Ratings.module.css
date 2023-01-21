@@ -1,0 +1,17 @@
+.container {
+    padding: 0 var(--spacing-2);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container i {
+    font-size: var(--spacing-3);
+  }
+
+  .container span {
+      padding: var(--spacing-0) 0;
+  }
+
+  .green {
+    color: var(--color-success);
+  }

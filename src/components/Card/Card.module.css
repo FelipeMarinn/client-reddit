@@ -1,0 +1,46 @@
+.container {
+    flex-grow: 2;
+}
+
+.container h3 {
+    padding-left: var(--spacing-0);
+}
+
+.datails {
+    margin-top: var(--spacing-2);
+    display: flex;
+    justify-content: space-between;
+    padding-right: var(--spacing-2);
+    font-size: .8rem;
+}
+
+.datails span:nth-child(0n+1) {
+    font-weight: 600;
+    color: var(--color-branding);
+}
+
+.datails, .container h3 {
+    text-align: left;
+}
+
+.datails button {
+    background: none;
+    border: none;
+}
+
+.datails i {
+    font-size: var(--spacing-2);
+}
+
+img, video {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain;
+}
+
+video {
+    background-color: black;
+}
