@@ -9,7 +9,9 @@ function App() {
       <div className="App">
         <Header />
         <Home/>
-        <SubReddits />
+        <aside>
+          <SubReddits />
+        </aside>
       </div>
   );
 }

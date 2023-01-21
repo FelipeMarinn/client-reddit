@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { formatNumber } from '../../utils/formatNumber'
+import style from './Ratings.module.css'
 
 export const Ratings = ({ ups }) => {
   const [upsToggle, setUpsToggle] = useState(false)
@@ -20,10 +21,10 @@ export const Ratings = ({ ups }) => {
   }
 
   return (
-    <div>
+    <div className={style.container}>
       <i 
-       className="fa-solid fa-up-long"
-       style={{color: `${ upsToggle ? 'green' : '' }`}}
+       className="fa-regular fa-circle-up"
+       style={{color: `${upsToggle ? '#45b81f' : ''}`}}
        onClick={ handleUpsToggle }
        role='button' >
       </i>
@@ -32,11 +33,11 @@ export const Ratings = ({ ups }) => {
         color: `${ upsToggle ? 'green' : downsToggle ? 'red' : ''}`
       }}>{ formatNumber(ups) }</span>
   
-      <i 
-        className="fa-solid fa-down-long"
-        style={{color: `${ downsToggle ? 'red' : '' }`}}
+      <i
+        className="fa-regular fa-circle-down"
+        style={{color: `${downsToggle ? '#ff304f' : ''}`}}
         onClick={ handleDownsToggle }
-        rule='button' >
+        rule='button'>
       </i>
     </div>
   )

@@ -1,0 +1,25 @@
+
+.comment {
+    padding: var(--spacing-2);
+    margin: 8px 16px 8px 0;
+}
+
+.comment:hover {
+    box-shadow: var(--box-shadow-2);
+}
+
+.comment p {
+    text-align: left;
+}
+
+.metadata {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 var(--spacing-2); */
+    margin-bottom: var(--spacing-2);
+}
+
+.metadata p:nth-child(1){
+    color: var(--color-branding);
+    font-weight: 600;
+}
