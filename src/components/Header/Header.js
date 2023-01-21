@@ -5,10 +5,10 @@ import logo from '../../assets/logo.svg'
 
 export const Header = () => {
   return (
-    <header>
+    <header className={style.header}>
       <div className={style.logo}>
         <img src={logo} alt=''/>
-        <p>Reddit <span>Minimal</span> </p>
+        <p><span>Reddit</span>Minimal</p>
       </div>
       <SearchBar />
     </header>

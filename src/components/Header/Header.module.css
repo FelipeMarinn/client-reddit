@@ -1,3 +1,26 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 var( --spacing-4);
+    box-shadow: var(--box-shadow);
+}
+
 .logo {
     display: flex;
+    grid-column: 1 / 2;
+    font-size: 18px;
+    color: var( --color-text-header);
+}
+
+.logo img {
+    margin-right: var( --spacing-0);
+    width: 2.2rem;
+}
+
+.logo p {
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--color-branding);
 }

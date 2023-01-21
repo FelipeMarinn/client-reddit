@@ -13,13 +13,13 @@ export const SearchBar = () => {
   }
 
   return (
-    <form className={style.header} onSubmit={ search }>
+    <form className={style.form} onSubmit={ search }>
         <input 
           type='text' 
           value={ searchTerm }
           placeholder='Search'
           onChange={ (e) => setSearchTerm(e.target.value) } />
-        <button type='button' onClick={ search }>
+        <button className={style.button} type='button' onClick={ search }>
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>
     </form>
