@@ -2,7 +2,6 @@ const BASE_URL = 'https://www.reddit.com'
 
 export const getPosts = async (subRedditUrl = '') => {
     const requesUrl = `${BASE_URL}${subRedditUrl}.json` 
-    console.log(requesUrl);
     const response = await fetch(requesUrl, {
         method: 'GET'
     })
@@ -21,7 +20,6 @@ export const getSubReddits = async () => {
 } 
 
 export const getCommentsReddit = async ({ postId, subReddit }) => {
-  console.log(subReddit);
   const requesUrl = `${BASE_URL}/r/${subReddit}/comments/${postId}/.json`
   const response = await fetch(requesUrl, {
     method: 'GET'

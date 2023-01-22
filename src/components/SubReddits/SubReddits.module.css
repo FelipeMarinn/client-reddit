@@ -1,3 +1,38 @@
-.menu {
-    border: 1px solid tomato;
+.container {
+    padding: var(--spacing-4);
+    text-align: left;
+    position: fixed;
+    height: 75%;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.container ul {
+    padding: 0;
+}
+
+.container button {
+    background: none;
+    border: none;
+    padding: var(--spacing-2);
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    color: var(--color-body);
+}
+
+.container img, .icon {
+    width: 25px;
+    border-radius: 50%;
+    margin-right: var(--spacing-1);
+    border: 2px solid var(--color-branding);
+}
+
+.container li:hover {
+    background-color: var( --color-background);
+}
+
+.icon {
+    background-color: aliceblue;
+    height: 25px;
 }
