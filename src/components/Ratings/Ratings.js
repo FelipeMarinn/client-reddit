@@ -37,8 +37,7 @@ export const Ratings = ({ ups }) => {
         className="fa-regular fa-circle-down"
         style={{color: `${downsToggle ? '#ff304f' : ''}`}}
         onClick={ handleDownsToggle }
-        rule='button'>
-      </i>
+        rule='button' />
     </div>
   )
 }

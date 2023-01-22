@@ -34,7 +34,7 @@ export const SubReddits = () => {
                   subReddit.icon_img ? <img 
                   src={subReddit.icon_img} 
                   alt={ subReddit.display_name }/>
-                  : <div className={style.icon}></div>
+                  : <div className={style.icon} />
                 }
                 { subReddit.display_name }
               </button>

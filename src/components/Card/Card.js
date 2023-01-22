@@ -30,10 +30,10 @@ export const Card = ({ data }) => {
         { 
           data.is_video
             ? <video controls width={400} preload="auto">
-                <source src={data.secure_media.reddit_video.dash_url}></source>
-                <source src={data.secure_media.reddit_video.fallback_url}></source>
-                <source src={data.secure_media.reddit_video.scrubber_media_url}></source>
-                <source src={data.secure_media.reddit_video.hls_url}></source>
+                <source src={data.secure_media.reddit_video.dash_url} />
+                <source src={data.secure_media.reddit_video.fallback_url} />
+                <source src={data.secure_media.reddit_video.scrubber_media_url} />
+                <source src={data.secure_media.reddit_video.hls_url} />
               </video> 
             : <img src={ data.url } alt='' width='320px'/> 
         }
@@ -43,7 +43,7 @@ export const Card = ({ data }) => {
          <span>{ formatDate(data.created) } hours ago</span>
          <span>
            <button type='button' onClick={ getComments }>
-             <i class="fa-regular fa-message"></i>
+             <i class="fa-regular fa-message" />
            </button>
            { data.num_comments }
           </span>
