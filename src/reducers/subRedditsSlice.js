@@ -10,9 +10,22 @@ export const getSubRedditsAsync = createAsyncThunk(
     }
 )
 
+export const setSelectedSubreddit = (subRedditUrl) => ({
+    type: 'subReddits/setSelectedSubreddit',
+    payload: subRedditUrl
+})
+
 export const subRedditSlice = createSlice({
     name: 'subReddits',
-    initialState: { subReddits: [] },
+    initialState: { 
+        subReddits: [],
+        selectedSubreddit: '/r/Home/'
+    },
+    reducers: {
+        setSelectedSubreddit: (state, action) => {
+            state.selectedSubreddit = action.payload
+        }
+    },
     extraReducers: (builder) => {
         builder
           .addCase(getSubRedditsAsync.fulfilled, (state, action) => {
@@ -23,3 +36,4 @@ export const subRedditSlice = createSlice({
 
 // seleciona el estado actual de subReddits
 export const selectSubReddits = (state) => state.subReddits.subReddits
+export const selectSelectedSubreddit = (state) => state.subReddits.selectedSubreddit

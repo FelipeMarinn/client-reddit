@@ -9,5 +9,6 @@ export const formatNumber = number => {
     }
    
     // And return!
+    console.log(numStr);
     return numStr;
   }

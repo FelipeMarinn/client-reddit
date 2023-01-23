@@ -1,5 +1,5 @@
 .container {
-    padding: var(--spacing-4);
+    padding: var(--spacing-3);
     text-align: left;
     position: fixed;
     height: 75%;
@@ -29,7 +29,17 @@
 }
 
 .container li:hover {
-    background-color: var( --color-background);
+    background-color:  #eeeeee;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
+}
+
+.selectedSubreddit {
+    background-color: #8549ba6b;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0 50%);
+}
+
+li.selectedSubreddit:hover {
+    background-color: #8549ba9c;
 }
 
 .icon {
